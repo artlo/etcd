@@ -6,18 +6,10 @@ require (
 	github.com/json-iterator/go v1.1.10
 	github.com/modern-go/reflect2 v1.0.1
 	go.etcd.io/etcd/api/v3 v3.0.0-20201012212543-0b95e8cef14a
-	go.etcd.io/etcd/pkg/v3 v3.0.0-00010101000000-000000000000
+	go.etcd.io/etcd/pkg/v3 v3.0.0-20201015223200-b7f0f52a16db
 )
 
 replace (
 	go.etcd.io/etcd/api/v3 => ../../api
 	go.etcd.io/etcd/pkg/v3 => ../../pkg
-)
-
-// Bad imports are sometimes causing attempts to pull that code.
-// This makes the error more explicit.
-replace (
-	go.etcd.io/etcd => ./FORBIDDEN_DEPENDENCY
-	go.etcd.io/etcd/v3 => ./FORBIDDEN_DEPENDENCY
-	go.etcd.io/tests/v3 => ./FORBIDDEN_DEPENDENCY
 )
